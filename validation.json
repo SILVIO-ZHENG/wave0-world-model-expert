@@ -1,0 +1,101 @@
+{
+  "source": "local WAVE-0 derivative: src/lerobot/policies/wave0/modeling_wave0.py",
+  "source_sha256": "8dcc68acddc13a5214dba3cc2ecd1e4dde5cb040daa80a459b3c5e10a3bb6a83",
+  "import_graph": {
+    "tensor_utils": [],
+    "attention": [],
+    "vlm_expert": [
+      "attention"
+    ],
+    "world_model": [
+      "vlm_expert"
+    ],
+    "stage1_model": [
+      "vlm_expert",
+      "world_model"
+    ],
+    "model": [
+      "model_inference",
+      "model_tokens",
+      "model_training",
+      "tensor_utils",
+      "vlm_expert",
+      "world_model"
+    ],
+    "policy": [
+      "model",
+      "policy_checkpoint",
+      "policy_data",
+      "policy_inference",
+      "policy_training",
+      "stage1_model"
+    ],
+    "model_tokens": [
+      "tensor_utils",
+      "world_model"
+    ],
+    "model_training": [
+      "tensor_utils"
+    ],
+    "model_inference": [
+      "tensor_utils"
+    ],
+    "policy_checkpoint": [
+      "tensor_utils"
+    ],
+    "policy_data": [
+      "tensor_utils"
+    ],
+    "policy_training": [
+      "tensor_utils"
+    ],
+    "policy_inference": [
+      "tensor_utils"
+    ]
+  },
+  "validation": [
+    "all original functions/classes or split methods retain identical AST",
+    "all modules compile",
+    "no circular local imports"
+  ],
+  "files": {
+    "attention.py": 453,
+    "configuration_wave0.py": 423,
+    "model.py": 287,
+    "model_inference.py": 363,
+    "model_tokens.py": 442,
+    "model_training.py": 221,
+    "policy.py": 251,
+    "policy_checkpoint.py": 539,
+    "policy_data.py": 144,
+    "policy_inference.py": 114,
+    "policy_training.py": 549,
+    "rtc_training.py": 190,
+    "stage1_model.py": 124,
+    "tensor_utils.py": 261,
+    "vlm_expert.py": 411,
+    "world_model.py": 435,
+    "_runtime.py": 78,
+    "__init__.py": 6
+  },
+  "runtime_import": "Blocked in default local Python: ModuleNotFoundError: torch. GPU/numerical validation not run.",
+  "comment_update": "Removed reading labels and original-line markers; expanded bilingual explanations; AST unchanged.",
+  "packaging_change": "Bundled configuration_wave0.py and rtc_training.py; _runtime.py uses relative imports for these two modules.",
+  "publication_checks": {
+    "structural_check": "19 Python sources; 18 local root modules; 84 original declarations/methods match",
+    "wheel_build": "passed; all 18 root Python modules included; ZIP integrity passed",
+    "rtc_cpu_behavior": [
+      "known prefix stays clean with per-token t=0",
+      "masked loss and gradients exclude prefix/padding",
+      "clamped prefix blocks gradients to committed values"
+    ],
+    "rtc_check_environment": "torch 2.14.0+cpu; outside original torch<2.11 range; only isolated helper behavior checked",
+    "not_validated": [
+      "full dependency environment",
+      "GPU numerical equivalence",
+      "full training",
+      "cloud source parity"
+    ],
+    "final_comment_validation": "All final model methods retain original executable AST; every root module compiles."
+  }
+}
