@@ -1,0 +1,17 @@
+WAVE-0 World Model Expert: modular source and explanatory documentation.
+
+This repository reorganizes a local derivative of the WAVE-0 codebase:
+https://github.com/AutoLab-SAI-SJTU/WAVE-0
+
+The original base checkout was at commit
+eaeb49294313140b6924782d56e6a5457ce10e13. That checkout also contained local
+modifications; extraction-source evidence is recorded in docs/PROVENANCE.md.
+
+Original source headers acknowledge Physical Intelligence and The HuggingFace
+Inc. team (2025). The upstream LICENSE acknowledges WAVE-0 contributors (2026).
+Those notices are preserved. Refactoring and explanatory comments do not
+imply endorsement by any upstream author or institution.
+
+此项目将本地 WAVE-0 衍生实现拆分为独立模块，并补充教学说明。
+保留原始版权声明及 Apache-2.0 许可证，不声称为论文官方仓库，
+也不声称获得上游作者或机构背书。

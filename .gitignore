@@ -1,0 +1,28 @@
+# Python build products and local environments / Python 构建产物及本地环境
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.venv*/
+.pytest_cache/
+.ruff_cache/
+
+# Credentials and machine-specific files / 凭据与机器专属文件
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+.DS_Store
+Thumbs.db
+
+# Model weights, datasets and training outputs / 权重、数据和训练输出
+*.safetensors
+*.pt
+*.pth
+*.ckpt
+checkpoints/
+datasets/
+runs/
+wandb/

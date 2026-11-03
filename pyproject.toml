@@ -1,0 +1,27 @@
+# Package the readable root-level modules as wave0_decoupled.
+# 将根目录的可读模块映射为 wave0_decoupled Python 包。
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "wave0-world-model-expert"
+version = "0.1.0"
+description = "Modular WAVE-0 / PI0.5 implementation with world-model-conditioned action experts"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {file = "LICENSE"}
+keywords = ["robotics", "vision-language-action", "world-model", "flow-matching", "attention"]
+dependencies = [
+    "torch>=2.2.1,<2.11.0",
+    "typing-extensions>=4.12.2",
+]
+
+# LeRobot and the specific Transformers revision are environment prerequisites.
+# LeRobot 与特定 Transformers 提交是环境前提；参见 requirements-runtime.txt。
+[tool.setuptools]
+packages = ["wave0_decoupled"]
+package-dir = {wave0_decoupled = "."}
+
+[tool.setuptools.package-data]
+wave0_decoupled = ["validation.json"]

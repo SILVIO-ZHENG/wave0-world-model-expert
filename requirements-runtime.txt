@@ -1,0 +1,11 @@
+# Install in a compatible LeRobot environment; this is not a frozen training lockfile.
+# 在兼容的 LeRobot 环境中安装；这不是原云端训练环境的完整锁文件。
+# The original source specifies this exact PI-compatible Transformers revision.
+# 原始源码指定此支持 PI/AdaRMS 的 Transformers 提交，普通最新版不能等价替代。
+transformers @ git+https://github.com/huggingface/transformers.git@dcddb970176382c0fcf4521b0c0e6fc15894dfe0
+torch>=2.2.1,<2.11.0
+typing-extensions>=4.12.2
+scipy>=1.10.1,<1.15
+safetensors>=0.4.3,<1.0.0
+# Base LeRobot must already be installed from a compatible WAVE-0 checkout.
+# 基础 LeRobot 应从兼容 WAVE-0 源码安装，见 README 中的两步安装方式。
