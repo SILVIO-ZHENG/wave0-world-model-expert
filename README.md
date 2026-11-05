@@ -2,7 +2,7 @@
 
 **Modular source connecting scene understanding, action-conditioned future prediction, and robot action generation.**
 
-This project separates a local WAVE-0 / π0.5 implementation into responsibility-specific modules for reading, research, and modification. It shows how a world model conditions a vision-language-action policy: the VLM proposes latent actions, the world model predicts future visual features, and the Action Expert generates an action chunk using both current context and predicted futures.
+This project separates a local WAVE-0 / π0.6 implementation into responsibility-specific modules for reading, research, and modification. It shows how a world model conditions a vision-language-action policy: the VLM proposes latent actions, the world model predicts future visual features, and the Action Expert generates an action chunk using both current context and predicted futures.
 
 ## What does it explain?
 
